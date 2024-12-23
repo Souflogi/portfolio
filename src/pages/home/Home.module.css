@@ -1,0 +1,152 @@
+.homePage {
+    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
+
+    margin: 2.5rem;
+    padding: 2rem 4rem;
+
+    border: 1px solid var(--clr-accent-500);
+    border-radius: 50px;
+
+}
+
+.homePage section {
+    display: grid;
+    grid-template-columns: 1fr .1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 85%;
+}
+
+
+/*Content ------------------------*/
+
+.homePage__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 70%;
+    max-width: 850px;
+
+    padding: 3rem;
+
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: var(--clr-accent-500);
+
+}
+
+.homePage__content::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: var(--clr-accent-400);
+
+}
+
+.homePage__content h1 {
+    align-self: flex-start;
+
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--clr-accent-500);
+
+    padding: 1rem 1rem 1rem 0;
+
+
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: var(--clr-accent-500);
+    border-radius: 0 10px 10px 0;
+}
+
+.homePage__content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    line-height: 1.4;
+
+}
+
+/*Picture ------------------------*/
+
+.homePage__img {
+    display: block;
+    max-width: 35rem;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+
+}
+
+
+
+.homePage__img img {
+    object-fit: cover;
+    height: 100%;
+
+}
+
+
+/*Social ------------------------*/
+
+.homePage__social,
+.homePage__social {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    font-size: 2.5rem;
+    color: var(--clr-accent-500);
+}
+
+.homePage__social a:link,
+.homePage__social a:visited {
+    text-decoration: none;
+    color: var(--clr-accent-500);
+
+}
+
+.homePage__social a:hover,
+.homePage__social a:active {
+    color: var(--clr-accent-400);
+}
+
+/* animation  */
+.homePage__content h1 {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeIn .5s ease-out forwards;
+}
+
+
+.homePage__content a:link,
+.homePage__content a:visited {
+    text-decoration: none;
+    color: var(--clr-accent-500);
+    font-weight: var(--fw-bold);
+}
+
+.homePage__content a:hover,
+.homePage__content a:active {
+    color: var(--clr-accent-400);
+    text-decoration: underline;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

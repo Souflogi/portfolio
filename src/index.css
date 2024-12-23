@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+
+:root {
+    --clr-neutral-800: hsl(213, 36%, 32%);
+    --clr-neutral-700: hsla(276, 16%, 41%, 1);
+    --clr-neutral-200: hsl(231, 7%, 60%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+
+    --clr-accent-400: hsla(21, 69%, 73%, 1);
+    --clr-accent-500: hsla(358, 70%, 66%, 1);
+
+    --ff-base: 'Roboto', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-300: .825rem;
+    --fs-400: 1rem;
+    --fs-500: 1.2rem;
+    --fs-900: 2.5rem;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-800);
+    background-color: var(--clr-neutral-100);
+}

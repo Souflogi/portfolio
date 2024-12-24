@@ -1,52 +1,80 @@
 .navbar {
+
+    width: 12rem;
+    max-height: 100svh;
+    padding: 4rem 0;
+
+    grid-column: span 1;
+
+    font-size: var(--fs-500);
+
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
+    gap: 15rem;
+
+    border-width: 0 1px 0 0;
+    border-color: var(--clr-accent-500);
+    border-style: solid;
+
+    position: sticky;
+    top: 0;
 }
 
 
 
 .navbar__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
     gap: 2.5rem;
-
+    width: 100%;
+    text-align: center;
+    padding-inline-start: 1.5rem;
 }
 
-.navbar__list__link:link,
-.navbar__list__link:visited {
+
+.navbar__list a:link,
+.navbar__list a:visited {
     position: relative;
     display: block;
     color: var(--clr-accent-500);
-    padding: 0.5rem;
+    padding: 1rem 0;
     text-decoration: none;
-    font-size: var(--fs-500);
     text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
+
 }
 
-.navbar__list__link:hover,
-.navbar__list__link:active {
+.navbar__list a:hover,
+.navbar__list a:active {
     color: var(--clr-accent-400);
 }
 
 
 
-.navbar__list__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--clr-accent-500);
-    transition: width 0.3s ease-in-out;
-    z-index: -1;
+.navbar__list a.active {
+    border: 1px solid var(--clr-accent-500);
+
+    border-right-color: var(--clr-neutral-100);
+    margin-right: -1px;
+    animation: activeStateAnimation 0.5s ease-out;
+
+
+    color: var(--clr-accent-400);
 }
 
 
-.navbar__list__link:hover::after,
-.navbar__list__link.active::after {
-    width: 50%;
+/* Keyframes for active state animation */
+@keyframes activeStateAnimation {
+    0% {
+        border: 1px solid var(--clr-neutral-100);
+        border-right-color: var(--clr-accent-500);
+        border-right-width: 0;
+    }
+
+    100% {
+        border: 1px solid var(--clr-accent-500);
+        border-right-color: var(--clr-neutral-100);
+        border-right-width: 2px;
+    }
 }

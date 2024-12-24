@@ -1,12 +1,17 @@
 .homePage {
-    height: calc(100vh - 5rem);
-    min-height: calc(100vh - 5rem);
 
-    margin: 2.5rem;
-    padding: 2rem 4rem;
 
-    border: 1px solid var(--clr-accent-500);
-    border-radius: 50px;
+    min-height: calc(100svh - 5rem);
+
+    margin: 1.5rem 1.5rem 1.5rem 0;
+
+    /* border-width: 1px 1px 1px 0;
+    border-radius: 0 50px 50px 0;
+    border-color: var(--clr-accent-500);
+    border-style: solid; */
+
+
+    overflow: hidden;
 
 }
 
@@ -29,7 +34,7 @@
     width: 70%;
     max-width: 850px;
 
-    padding: 3rem;
+    padding: 3rem 0;
 
     border-width: 1px 0 1px 0;
     border-style: solid;
@@ -80,6 +85,7 @@
     border-radius: 25px;
     overflow: hidden;
 
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.2);
 
 }
 

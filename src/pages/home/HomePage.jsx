@@ -15,8 +15,8 @@ function HomePage() {
     <div className="page_container">
       <NavBar />
       <main className={styles.homePage}>
-        <section>
-          <picture className={styles.homePage__img}>
+        <section className={styles.welcome}>
+          <picture className={styles.welcome__img}>
             <source
               srcSet={picture_mobile}
               type="image/jpg"
@@ -24,7 +24,7 @@ function HomePage() {
             />
             <img src={picture_desktop} alt="" />
           </picture>
-          <div className={styles.homePage__social}>
+          <div className={styles.welcome__social}>
             <a href="https://github.com/Soufiane-Sammah">
               <SlSocialGithub />
             </a>
@@ -38,7 +38,7 @@ function HomePage() {
               <SlSocialInstagram />
             </a>
           </div>
-          <div className={styles.homePage__content}>
+          <div className={styles.welcome__content}>
             <h1>Soufiane Sammah</h1>
             <p>
               Front-end developer passionate about building responsive and

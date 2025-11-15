@@ -1,8 +1,8 @@
 import "./index.css";
 
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import PageNotFound from "./pages/pageNotFound/PAgeNotFound";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 import AboutPage from "./pages/about/AboutPage";
 import WorkPage from "./pages/works/WorkPage";

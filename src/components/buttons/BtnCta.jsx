@@ -1,5 +1,5 @@
-import Btn from "./btn";
-import styles from "./btn.module.css";
+import Btn from "./Btn";
+import styles from "./Btn.module.css";
 function BtnCta({ children, onClick }) {
   return (
     <Btn className={styles.cta} onClick={onClick}>

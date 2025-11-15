@@ -90,3 +90,35 @@
 
     /* background-color: bisque; */
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .aboutPage {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .story__content {
+        margin-top: 2rem;
+        gap: 1.25rem;
+    }
+
+    .skills__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+}

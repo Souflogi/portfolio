@@ -8,7 +8,7 @@ import {
   SlSocialTwitter,
   SlSocialInstagram,
 } from "react-icons/sl";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (

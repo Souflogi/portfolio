@@ -33,8 +33,7 @@
 }
 
 
-.navbar__list a:link,
-.navbar__list a:visited {
+.navlink {
     position: relative;
     display: block;
     color: var(--clr-accent-500);
@@ -42,24 +41,19 @@
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 10px 0 0 10px;
-
 }
 
-.navbar__list a:hover,
-.navbar__list a:active {
+.navlink:hover {
     color: var(--clr-accent-400);
 }
 
 
 
-.navbar__list a.active {
+.active {
     border: 1px solid var(--clr-accent-500);
-
     border-right-color: var(--clr-neutral-100);
     margin-right: -1px;
     animation: activeStateAnimation 0.5s ease-out;
-
-
     color: var(--clr-accent-400);
 }
 
@@ -76,5 +70,38 @@
         border: 1px solid var(--clr-accent-500);
         border-right-color: var(--clr-neutral-100);
         border-right-width: 2px;
+    }
+}
+
+/* Responsive: navbar becomes a top bar */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        max-height: none;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--clr-accent-500);
+    }
+
+    .navbar__list {
+        display: flex;
+        gap: 0.75rem;
+        width: auto;
+        padding-inline-start: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navlink {
+        padding: .5rem .75rem;
+        border-radius: 8px;
+    }
+
+    .active {
+        margin-right: 0;
+        border-right-color: var(--clr-accent-500);
     }
 }

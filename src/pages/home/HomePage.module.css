@@ -1,5 +1,4 @@
 .homePage {
-
     /* 
     min-height: calc(100svh - 5rem);
     margin: 1.5rem 1.5rem 1.5rem 0;
@@ -8,17 +7,15 @@
     border-color: var(--clr-accent-500);
     border-style: solid;  
     overflow: hidden; */
-
 }
 
 .welcome {
     display: grid;
-    grid-template-columns: 1fr .1fr 1fr;
+    grid-template-columns: 1fr 0.1fr 1fr;
     justify-items: center;
     align-items: center;
     min-height: 100%;
 }
-
 
 /*Content ------------------------*/
 
@@ -35,7 +32,6 @@
     border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: var(--clr-accent-500);
-
 }
 
 .welcome__content::after {
@@ -44,7 +40,6 @@
     width: 50%;
     height: 3px;
     background-color: var(--clr-accent-400);
-
 }
 
 .welcome__content h1 {
@@ -57,7 +52,6 @@
 
     padding: 1rem 1rem 1rem 0;
 
-
     border-width: 1px 1px 1px 0;
     border-style: solid;
     border-color: var(--clr-accent-500);
@@ -69,7 +63,6 @@
     font-weight: 300;
     letter-spacing: 1.2px;
     line-height: 1.4;
-
 }
 
 /*Picture ------------------------*/
@@ -77,22 +70,16 @@
 .welcome__img {
     display: block;
     max-width: 35rem;
-
+    padding: 1rem;
     border-radius: 25px;
     overflow: hidden;
-
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.2);
-
 }
-
-
 
 .welcome__img img {
     object-fit: cover;
     height: 100%;
-
+    border-radius: 5px;
 }
-
 
 /*Social ------------------------*/
 
@@ -111,7 +98,6 @@
 .welcome__social a:visited {
     text-decoration: none;
     color: var(--clr-accent-500);
-
 }
 
 .welcome__social a:hover,
@@ -123,9 +109,8 @@
 .welcome__content h1 {
     opacity: 0;
     transform: translateX(-40px);
-    animation: fadeIn .5s ease-out forwards;
+    animation: fadeIn 0.5s ease-out forwards;
 }
-
 
 .welcome__content a:link,
 .welcome__content a:visited {
@@ -139,7 +124,6 @@
     color: var(--clr-accent-400);
     text-decoration: underline;
 }
-
 
 @keyframes fadeIn {
     from {
@@ -156,7 +140,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
     .welcome {
-        grid-template-columns: 1fr .1fr 1fr;
+        grid-template-columns: 1fr 0.1fr 1fr;
         gap: 2rem;
         padding: 2rem;
     }

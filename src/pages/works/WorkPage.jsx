@@ -1,50 +1,125 @@
 import NavBar from "../../components/navbar/NavBar";
 import styles from "./WorkPage.module.css";
+import healthiestoImg from "../../assets/images/works/healthiesto.png";
+import innerPeaceImg from "../../assets/images/works/Inner-Peace.png";
+import usepopcorn from "../../assets/images/works/usepopcorn.png";
+import portfolio from "../../assets/images/works/portfolio.png";
+import bankist from "../../assets/images/works/bankist.png";
+import cityscoper from "../../assets/images/works/cityscoper.png";
+import quiz from "../../assets/images/works/quiz.png";
+import manage from "../../assets/images/works/manage.png";
+import score from "../../assets/images/works/score.png";
 
 const projects = [
   {
-    title: "Responsive Landing Page",
-    role: "Frontend",
-    scope: "Design, Build, Optimize",
+    title: "Healthiesto Landing Page",
     summary:
-      "Marketing landing with clean IA, responsive layout, and fast LCP.",
-    impact: [
-      "Improved first contentful paint with image optimization",
-      "Reduced CSS by modularizing styles and pruning unused rules",
-      "Accessible color contrast and keyboard navigation",
-    ],
-    stack: ["React", "Vite", "CSS Modules"],
-    demo: "#",
-    code: "#",
+      "Responsive landing page for Healthiesto's healthy meal subscription",
+    category: "Marketing site",
+    year: "2024",
+    stack: ["HTML", "CSS", "JavaScript"],
+    demo: "https://healthiesto.netlify.app/",
+    repo: "https://github.com/Souflogi/Healthiesto.git",
+    image: healthiestoImg,
+    imgAlt: "Screenshot of Healthiesto hero section",
   },
   {
-    title: "UI Components Library",
-    role: "Frontend",
-    scope: "Architecture, Components",
+    title: "Inner Peace Website",
     summary:
-      "Reusable, accessible UI kit (buttons, forms, layout) with tokens.",
-    impact: [
-      "Unified styles via CSS variables and module scoping",
-      "Improved DX with composable props and simple theming",
-      "A11y-first: focus states, labels, and ARIA where needed",
-    ],
+      "A serene landing experience built to express presence and clarity through minimal visuals, mindful typography, and soft UI motion. Each section flows like breath — introducing a calm digital space for reflection and balance.",
+    category: "Well-being / Brand Experience",
+    year: "2025",
+    stack: ["CSS", "HTML", "JavaScript"],
+    demo: "https://souflogi.github.io/InnerPeace/",
+    repo: "https://github.com/Souflogi/InnerPeace.git",
+    image: innerPeaceImg,
+    imgAlt: "Inner Peace landing page with calm visuals and mindful layout",
+  },
+  {
+    title: "WorldWise",
+    summary:
+      "A travel mapping app that lets users pin cities, record visit dates, and write personal notes. Built with dynamic routing, interactive Leaflet maps, and a clean form-driven UI for tracking places you've explored.",
+    category: "React App / Mapping",
+    year: "2024",
+    stack: ["React", "Leaflet", "React Router", "Context API"],
+    demo: "https://cityscoper.netlify.app/",
+    repo: "https://github.com/Souflogi/worldwise.git",
+    image: cityscoper,
+    imgAlt: "WorldWise map view with selected city details",
+  },
+
+  {
+    title: "Personal Portfolio",
+    summary:
+      "Simple, fast portfolio with routed pages, case-study hooks, and refined typography.",
+    category: "Personal",
+    year: "2022",
+    stack: ["Vite", "React", "React Router"],
+    demo: "#",
+    repo: "https://github.com/Souflogi/portfolio.git",
+    image: portfolio,
+    imgAlt: "Portfolio layout glimpse",
+  },
+  {
+    title: "Bankist Landing Page",
+    summary:
+      "A modern banking landing page built with vanilla JavaScript. Features smooth scrolling, tabbed components, sticky navigation, lazy-loading images, reveal-on-scroll animations, and modular DOM interactions for a seamless user experience.",
+    category: "Frontend / DOM Manipulation",
+    year: "2023",
+    stack: ["HTML", "CSS", "JavaScript (ES6+)", "Intersection Observer"],
+    demo: "https://souflogi.github.io/DOM-Project-Banky/",
+    repo: "https://github.com/Souflogi/DOM-Project-Banky.git",
+    image: bankist,
+    imgAlt: "Bankist landing page with green gradient hero section",
+  },
+  {
+    title: "usePopcorn",
+    summary:
+      "A responsive movie finder built with modern React patterns. Features real-time search, interactive movie details, persistent watchlist storage, and a clean, card-based UI.",
+    category: "React App",
+    year: "2024",
+    stack: ["React", "Custom Hooks", "LocalStorage API"],
+    demo: "https://souflogi.github.io/usepopcorn/",
+    repo: "https://github.com/Souflogi/usepopcorn.git",
+    image: usepopcorn,
+    imgAlt: "usePopcorn movie search interface with card grid",
+  },
+  {
+    title: "React Quiz",
+    summary:
+      "A timed multiple-choice quiz app built with React. Features dynamic question loading, a reducer-based state flow, progress tracking, scoring logic, and a countdown timer for a more interactive experience.",
+    category: "React App",
+    year: "2024",
+    stack: ["React", "useReducer", "Custom Hooks"],
+    demo: "https://your-github-username.github.io/react-quiz",
+    repo: "https://github.com/your-github-username/react-quiz",
+    image: quiz,
+    imgAlt: "React Quiz interface with timer and question display",
+  },
+  {
+    title: "Manage Landing Page",
+    summary:
+      "A modern marketing landing page built with clean typography, reusable layout components, and responsive design patterns. Includes a hero section, feature blocks, call-to-action buttons, and structured content modeled after real product websites.",
+    category: "Frontend / Landing Page",
+    year: "2023",
+    stack: ["HTML", "CSS", "JavaScript"],
+    demo: "https://your-github-username.github.io/manage-landing-page",
+    repo: "https://github.com/your-github-username/manage-landing-page",
+    image: manage,
+    imgAlt: "Manage landing page with hero content and feature cards",
+  },
+  {
+    title: "Level-Up XP Tracker",
+    summary:
+      "A gamified experience tracker where users add points to fill an animated progress bar and level up. Features dynamic UI updates, glowing visual effects, input validation, and a clean interactive layout inspired by game HUD design.",
+    category: "Frontend / Gamified UI",
+    year: "2023",
     stack: ["React", "CSS"],
-    demo: "#",
-    code: "#",
-  },
-  {
-    title: "Portfolio Website",
-    role: "Frontend",
-    scope: "Routing, Layout, Content",
-    summary: "Personal site with sidebar nav, responsive pages, and polish.",
-    impact: [
-      "Clear navigation with active route styling",
-      "Mobile-first breakpoints for all sections",
-      "Simple, maintainable structure with CSS Modules",
-    ],
-    stack: ["React Router", "Vite", "CSS Modules"],
-    demo: "#",
-    code: "#",
+    demo: "https://souflogi.github.io/UI_ANIMATION_TEST/",
+    repo: "https://github.com/Souflogi/UI_ANIMATION_TEST.git",
+    image: score,
+    imgAlt:
+      "Gamified XP level tracker with glowing progress bar and score input",
   },
 ];
 
@@ -61,45 +136,49 @@ function WorkPage() {
           </p>
         </header>
         <section className={styles.grid}>
-          {projects.map((p, i) => (
-            <article key={i} className={styles.card}>
-              <div className={styles.cardHead}>
-                <h3>{p.title}</h3>
-                <p className={styles.meta}>
-                  <span className={styles.badge}>{p.role}</span>
-                  <span className={styles.badge}>{p.scope}</span>
-                </p>
+          {projects.map((project, index) => (
+            <article key={project.title + index} className={styles.card}>
+              <div className={styles.media}>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.imgAlt || project.title}
+                  />
+                ) : (
+                  <div className={styles.mediaPlaceholder}>
+                    <span>Preview coming soon</span>
+                  </div>
+                )}
               </div>
-              <p className={styles.desc}>{p.summary}</p>
-              <div>
-                <div className={styles.sectionLabel}>Impact</div>
-                <ul className={styles.impact}>
-                  {p.impact.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
+              <div className={styles.cardMeta}>
+                <span>{project.category}</span>
+                <span>{project.year}</span>
               </div>
-              <ul className={styles.tech}>
-                {p.stack.map((t) => (
-                  <li key={t}>{t}</li>
+              <h3>{project.title}</h3>
+              <p className={styles.desc}>{project.summary}</p>
+              <ul className={styles.tags}>
+                {project.stack.map(item => (
+                  <li key={project.title + item}>{item}</li>
                 ))}
               </ul>
-              <div className={styles.links}>
-                {p.demo && (
-                  <a href={p.demo} target="_blank" rel="noreferrer">
-                    Live
+              <div className={styles.cardActions}>
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noreferrer">
+                    Live Site
                   </a>
                 )}
-                {p.code && (
-                  <a href={p.code} target="_blank" rel="noreferrer">
-                    Code
+                {project.repo && (
+                  <a href={project.repo} target="_blank" rel="noreferrer">
+                    Repo
                   </a>
                 )}
               </div>
             </article>
           ))}
         </section>
-        <p className={styles.note}>Detailed case studies available on request.</p>
+        <p className={styles.note}>
+          More recent work and case studies available on request.
+        </p>
       </main>
     </div>
   );

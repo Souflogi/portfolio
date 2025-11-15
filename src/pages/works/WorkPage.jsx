@@ -10,8 +10,22 @@ import quiz from "../../assets/images/works/quiz.png";
 import manage from "../../assets/images/works/manage.png";
 import score from "../../assets/images/works/score.png";
 import simplebank from "../../assets/images/works/simplebank.png";
+import pizzaro from "../../assets/images/works/pizzaro.png";
 
 const projects = [
+  {
+    title: "Pizzaro",
+    summary:
+      "A fully functional pizza ordering app built with React Router, Redux Toolkit, and async data loading. Features menu browsing, cart management, order creation, real-time order status updates, and robust state architecture using slices, thunks, and reducers.",
+    category: "React App / Redux",
+    year: "2024",
+    stack: ["React", "Redux Toolkit", "React Router", "Tailwind CSS"],
+    demo: "https://your-github-username.github.io/pizzaro",
+    repo: "https://github.com/your-github-username/pizzaro",
+    image: pizzaro,
+    imgAlt:
+      "Pizzaro app interface showing pizza menu, cart summary, and order workflow",
+  },
   {
     title: "Healthiesto Landing Page",
     summary:

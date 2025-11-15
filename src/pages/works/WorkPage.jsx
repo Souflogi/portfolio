@@ -9,6 +9,7 @@ import cityscoper from "../../assets/images/works/cityscoper.png";
 import quiz from "../../assets/images/works/quiz.png";
 import manage from "../../assets/images/works/manage.png";
 import score from "../../assets/images/works/score.png";
+import simplebank from "../../assets/images/works/simplebank.png";
 
 const projects = [
   {
@@ -120,6 +121,19 @@ const projects = [
     image: score,
     imgAlt:
       "Gamified XP level tracker with glowing progress bar and score input",
+  },
+  {
+    title: "Bankist App",
+    summary:
+      "A functional banking interface built with modern JavaScript. Includes user authentication, money transfers, loan requests, account closure, live balances, transaction sorting, and an auto-logout security timer — all rendered with dynamic DOM updates.",
+    category: "Frontend / Web App",
+    year: "2023",
+    stack: ["HTML", "CSS", "JavaScript (ES6+)"],
+    demo: "https://souflogi.github.io/Banky/",
+    repo: "https://github.com/Souflogi/Banky.git",
+    image: simplebank,
+    imgAlt:
+      "Bankist dashboard showing balance, transactions, and money transfer form",
   },
 ];
 

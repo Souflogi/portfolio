@@ -1,33 +1,30 @@
 .homePage {
-    /* 
-    min-height: calc(100svh - 5rem);
-    margin: 1.5rem 1.5rem 1.5rem 0;
-    border-width: 1px 1px 1px 0;
-    border-radius: 0 50px 50px 0;
-    border-color: var(--clr-accent-500);
-    border-style: solid;  
-    overflow: hidden; */
+    width: 100%;
+    padding: var(--page-block-padding) var(--page-inline-padding);
 }
 
 .welcome {
     display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
-    justify-items: center;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "image social content";
+    justify-items: stretch;
     align-items: center;
+    gap: var(--layout-gap);
+    width: min(1100px, 100%);
+    margin-inline: auto;
     min-height: 100%;
 }
 
 /*Content ------------------------*/
 
 .welcome__content {
+    grid-area: content;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: clamp(1.25rem, 2vw, 2rem);
+    width: min(100%, 36rem);
 
-    width: 70%;
-    max-width: 850px;
-
-    padding: 3rem 0;
+    padding: clamp(1.5rem, 3vw, 3rem) 0;
 
     border-width: 1px 0 1px 0;
     border-style: solid;
@@ -45,7 +42,7 @@
 .welcome__content h1 {
     align-self: flex-start;
 
-    font-size: 3rem;
+    font-size: clamp(2rem, 2.2vw + 1rem, 3rem);
     font-weight: 500;
     text-transform: uppercase;
     color: var(--clr-accent-500);
@@ -59,23 +56,26 @@
 }
 
 .welcome__content p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.15vw + 0.35rem, 1.35rem);
     font-weight: 300;
     letter-spacing: 1.2px;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /*Picture ------------------------*/
 
 .welcome__img {
+    grid-area: image;
+    width: min(100%, 28rem);
+    justify-self: stretch;
     display: block;
-    max-width: 35rem;
     padding: 1rem;
     border-radius: 25px;
     overflow: hidden;
 }
 
 .welcome__img img {
+    width: 100%;
     object-fit: cover;
     height: 100%;
     border-radius: 5px;
@@ -83,15 +83,20 @@
 
 /*Social ------------------------*/
 
-.welcome__social,
 .welcome__social {
-    height: 40%;
+    grid-area: social;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
     color: var(--clr-accent-500);
+}
+
+.welcome__social a {
+    display: flex;
 }
 
 .welcome__social a:link,
@@ -138,33 +143,82 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .welcome {
-        grid-template-columns: 1fr 0.1fr 1fr;
-        gap: 2rem;
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .welcome {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            "image content"
+            "social content";
+        justify-items: center;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
     }
 
     .welcome__img {
-        max-width: 20rem;
+        justify-self: center;
+        max-width: 24rem;
     }
 
     .welcome__social {
         flex-direction: row;
-        height: auto;
+        font-size: clamp(1.3rem, 2vw, 2rem);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .welcome {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "content"
+            "social";
+        justify-items: center;
+        padding: clamp(1rem, 4vw, 1.75rem);
+    }
+
+    .welcome__img {
+        justify-self: center;
+        max-width: min(24rem, 100%);
+        padding: 0.75rem;
     }
 
     .welcome__content {
         width: 100%;
         padding: 1rem 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .welcome__content h1 {
+        align-self: center;
+    }
+
+    .welcome__content::after {
+        margin-inline: auto;
+    }
+
+    .welcome__social {
+        flex-direction: row;
+        height: auto;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome {
+        gap: clamp(1rem, 4vw, 1.75rem);
+    }
+
+    .welcome__img {
+        max-width: min(20rem, 100%);
+    }
+
+    .welcome__social {
+        font-size: 1.75rem;
+    }
+
+    .welcome__content {
+        padding: 1rem 0 0;
     }
 
     .welcome__content h1 {
@@ -173,5 +227,15 @@
 
     .welcome__content p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome__social {
+        font-size: 1.5rem;
+    }
+
+    .welcome__content h1 {
+        font-size: 1.75rem;
     }
 }

@@ -135,6 +135,7 @@
         border-right: none;
         border-bottom: 1px solid var(--clr-accent-500);
         font-size: var(--fs-400);
+        background-color: var(--clr-neutral-100);
     }
 
     .navbar__list {
